@@ -48,14 +48,10 @@ function HomeComponent() {
   };
 
   const handleSelectLesson = (lessonId: Unit['lessons'][number]['id']) => {
-    const lesson = selectedUnit?.lessons.find(
-      (item) => String(item.id) === String(lessonId),
-    );
     setIsModalOpen(false);
     navigate({
       to: '/lessons/$lessonId',
       params: { lessonId: String(lessonId) },
-      state: { lesson },
     });
   };
 
